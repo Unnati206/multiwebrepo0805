@@ -1,0 +1,26 @@
+version: 0.0
+os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html
+  - source: /about.html
+    destination: /var/www/html
+  - source: /courses.html
+    destination: /var/www/html
+  - source: /contact.html
+    destination: /var/www/html
+  - source: /login.html
+    destination: /var/www/html
+  - source: /dashboard.html
+    destination: /var/www/html
+  - source: /css
+    destination: /var/www/html
+  - source: /js
+    destination: /var/www/html
+
+ 
+hooks:
+  BeforeInstall:
+    - location: scripts/dep.sh
+      timeout: 300
+      runas: root
